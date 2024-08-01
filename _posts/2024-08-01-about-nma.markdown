@@ -1,0 +1,7 @@
+---
+layout: default
+title:  "About NMA DL"
+date:   2024-08-01 13:07:17 -0600
+categories: ml dl nma research 
+---
+[Project Gallery](https://airtable.com/appoh6RKyBvxgiJ89/shrb9g7CtJXkOx1bo/tblSa9P74Gn2Frby4)
