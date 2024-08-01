@@ -4,6 +4,10 @@ tag_text: narinas.xyuz
 description: Personal homepage
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://site.narinas.xyz" # the base hostname & protocol for your site, e.g. http://example.com
+email: "eatrujillo@narinas.xyz" # the base email
+gitlab: "Narinas" # gitlab account
+github: "Narinas" # github account
+linkedin: "linked.in/eatmath" # linkedin account
 
 plugins:
   - jekyll-seo-tag
