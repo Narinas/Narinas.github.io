@@ -1,5 +1,5 @@
 body {
-    font-family: Georgia, Times New Roman, serif;
+    font-family: Cantarell, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -48,6 +48,24 @@ h1 {
 
 article {
     margin-bottom: 20px;
+}
+
+#currently-reading ul {
+    list-style: none;
+    padding: 0;
+}
+
+#currently-reading li {
+    margin-bottom: 10px;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact li {
+    margin-bottom: 10px;
 }
 
 footer {
