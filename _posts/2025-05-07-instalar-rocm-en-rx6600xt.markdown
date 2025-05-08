@@ -1,3 +1,9 @@
+---
+layout: default
+title:  "Cómo instalar ROCm en una tarjeta RX 6600"
+date:   2025-05-07 22:00:00 -0600
+categories: ml dl research selfhost ai
+---
 ## Introducción
 
 
@@ -35,6 +41,7 @@ COPY override.conf /etc/systemd/system/ollama.service/override.conf
 ```
 
 Y llenamos el `override.conf` de la siguiente manera:
+    
 ```
 Enviroment=HSA_OVERRIDE_GFX_VERSION=10.3.0
 ```
@@ -43,6 +50,7 @@ Esto permitirá pasar la sobreescritura al proceso de OLlama en este contenedor 
 ## Deployment
 
 Los modelos suelen ser intensivos en memoria (finalmente buscamos alojarlos en la vRAM de la tarjeta de videos), entonces recomiendo crear un lugar en el disco, o en un punto de montaje de un disco dedicado a modelos. En esta guía la ubicación que usaremos será `/opt/ollama/models` . De igual forma buscamos mapear el usuario dentro del contenedor al usuario que gestiona esta ruta. Asumimos que es el usuario con `UID:GID=1000:1000`.
+
 ```
 mkdir -p /opt/ollama/models
 chown -R 1000:1000 /opt/ollama/
@@ -184,7 +192,8 @@ services:
 
 volumes:
   - open-webui-data:
-		```
+
+```
 
 Open Web UI estará disponible en `http://localhost:80`, ahí podremos ver una interfaz similar a la siguiente:
 ![Open Web UI en interfaz móvil](/assets/img/instalar-rocm-en-rx6600xt/img1.png)
